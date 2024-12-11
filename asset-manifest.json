@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Lumina-React/static/css/main.aeaf5824.css",
+    "main.js": "/Lumina-React/static/js/main.8fcf644e.js",
+    "static/js/488.9f3e0cfb.chunk.js": "/Lumina-React/static/js/488.9f3e0cfb.chunk.js",
+    "index.html": "/Lumina-React/index.html",
+    "main.aeaf5824.css.map": "/Lumina-React/static/css/main.aeaf5824.css.map",
+    "main.8fcf644e.js.map": "/Lumina-React/static/js/main.8fcf644e.js.map",
+    "488.9f3e0cfb.chunk.js.map": "/Lumina-React/static/js/488.9f3e0cfb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aeaf5824.css",
+    "static/js/main.8fcf644e.js"
+  ]
+}
