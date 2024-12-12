@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Lumina-React">
       <Routes>
         <Route path = "/" element = {<Home></Home>}></Route>
         <Route path = "/about" element = {<About></About>}></Route>
