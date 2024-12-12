@@ -11,9 +11,9 @@ export function Header() {
           className="w-30 h-20"
         />
         <nav id="nav-bar" className="flex space-x-5 ml-40 font-mono">
-          <a className="nav-link hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 hover:shadow-md transition-all" href="#us-section">Sobre nosotros</a>
-          <a className="nav-link hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 hover:shadow-md transition-all" href="#video-section">¿Qué es lo que hacemos?</a>
-          <a className="nav-link hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 hover:shadow-md transition-all" href="#contract-section">Contratar</a>
+          <a className="nav-link hover:bg-black hover:text-white rounded-lg px-4 py-2 hover:shadow-md transition-all" href="#us-section">Sobre nosotros</a>
+          <a className="nav-link hover:bg-black hover:text-white rounded-lg px-4 py-2 hover:shadow-md transition-all" href="#video-section">¿Qué es lo que hacemos?</a>
+          <a className="nav-link hover:bg-black hover:text-white rounded-lg px-4 py-2 hover:shadow-md transition-all" href="#contract-section">Contratar</a>
         </nav>
         <section id="logo-section">
           <div id="logo-elements-container" className="flex space-x-4">
