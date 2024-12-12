@@ -6,7 +6,8 @@ export function Header() {
       <header id="header" className="flex items-center justify-between px-6 py-4">
         <img
           id="header-img"
-          src="/imagenes/LuminaLogo1.png"
+          src={`${process.env.PUBLIC_URL}/imagenes/LuminaLogo1.png`}
+          onError={(e) => console.error("Error cargando la imagen:", e.target.src)}
           alt="Lumina Cybersecurity logo"
           className="w-30 h-20"
         />
@@ -18,16 +19,16 @@ export function Header() {
         <section id="logo-section">
           <div id="logo-elements-container" className="flex space-x-4">
             <a className="media-icon transform transition-all duration-300 hover:scale-110 hover:rotate-12" href="https://www.facebook.com" target="_blank">
-              <img src="/imagenes/facebook.png" alt="Logotipo de Facebook" className="w-8 h-8" />
+              <img src={`${process.env.PUBLIC_URL}/imagenes/facebook.png`} alt="Logotipo de Facebook" className="w-8 h-8" />
             </a>
             <a className="media-icon transform transition-all duration-300 hover:scale-110 hover:rotate-12" href="https://www.twitter.com" target="_blank">
-              <img src="/imagenes/twitter.png" alt="Logotipo de Twitter/X" className="w-8 h-8" />
+              <img src={`${process.env.PUBLIC_URL}/imagenes/twitter.png`} className="w-8 h-8" />
             </a>
             <a className="media-icon transform transition-all duration-300 hover:scale-110 hover:rotate-12" href="https://www.instagram.com" target="_blank">
-              <img src="/imagenes/instagram.png" alt="Logotipo de Instagram" className="w-8 h-8" />
+              <img src={`${process.env.PUBLIC_URL}/imagenes/instagram.png`} className="w-8 h-8" />
             </a>
             <a className="media-icon transform transition-all duration-300 hover:scale-110 hover:rotate-12" href="https://www.tiktok.com" target="_blank">
-              <img src="/imagenes/tiktok.png" alt="Logotipo de TikTok" className="w-8 h-8" />
+              <img src={`${process.env.PUBLIC_URL}/imagenes/tiktok.png`} className="w-8 h-8" />
             </a>
           </div>
         </section>
@@ -40,7 +41,7 @@ export function Info() {
   return (
     <section id="info-section">
       <div className="flex justify-end w-full h-auto">
-        <img className="absolute w-7/12 h-6/12 object-contain translate-x-40" src="/imagenes\laptop.png" alt="Laptop"></img>
+        <img className="absolute w-7/12 h-6/12 object-contain translate-x-40" src={`${process.env.PUBLIC_URL}/imagenes/laptop.png`} alt="Laptop"></img>
       </div>
     </section>
   );
