@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Lumina-React/static/css/main.86b582b1.css",
-    "main.js": "/Lumina-React/static/js/main.45d7ef4d.js",
+    "main.js": "/Lumina-React/static/js/main.86b03eab.js",
     "static/js/488.9f3e0cfb.chunk.js": "/Lumina-React/static/js/488.9f3e0cfb.chunk.js",
     "index.html": "/Lumina-React/index.html",
     "main.86b582b1.css.map": "/Lumina-React/static/css/main.86b582b1.css.map",
-    "main.45d7ef4d.js.map": "/Lumina-React/static/js/main.45d7ef4d.js.map",
+    "main.86b03eab.js.map": "/Lumina-React/static/js/main.86b03eab.js.map",
     "488.9f3e0cfb.chunk.js.map": "/Lumina-React/static/js/488.9f3e0cfb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.86b582b1.css",
-    "static/js/main.45d7ef4d.js"
+    "static/js/main.86b03eab.js"
   ]
 }
