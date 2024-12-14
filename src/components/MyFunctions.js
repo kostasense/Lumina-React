@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 
 export function Header() {
   return (
@@ -39,6 +39,7 @@ export function Header() {
 }
 
 export function Info() {
+
   return (
     <section id="info-section">
       <div className="flex justify-end w-full h-auto">
@@ -47,8 +48,15 @@ export function Info() {
       <div className="flex flex-col justify-start w-full h-auto">
         <h1 className="text-5xl font-mono w-8/12 mt-10 ml-10 mb-5">La seguridad siempre es excesiva, hasta que no es suficiente.</h1>
         <h2 className="text-xl font-mono w-6/12 mt-10 ml-10">En Lumina, nos preocupamos por tus necesidades y seguridad, es por eso que nos dedicamos a proveer las soluciones de ciberseguridad mas adaptables a tu negocio.</h2>
-        <a className="w-24 h-24 ml-40 mt-10 transform transition-all duration-300 hover:scale-110" href="#us-section">
-          <img className="w-auto h-auto" src={`${process.env.PUBLIC_URL}/imagenes/flecha-abajo.png`}/>
+        <a
+          className="w-24 h-24 ml-40 mt-10 transform transition-all hover:scale-110 hover:rotate-360 active:scale-100 duration-300"
+          href="#us-section"
+        >
+          <img
+            className="w-auto h-auto"
+            src={`${process.env.PUBLIC_URL}/imagenes/flecha-abajo.png`}
+            alt="Flecha abajo"
+          />
         </a>
       </div>
     </section>

@@ -7,15 +7,8 @@ function App() {
     <Router basename="/Lumina-React">
       <Routes>
         <Route path = "/" element = {<Home></Home>}></Route>
-        <Route path = "/about" element = {<About></About>}></Route>
       </Routes>
     </Router>
-  );
-}
-
-function About() {
-  return (
-    <body></body>
   );
 }
 
