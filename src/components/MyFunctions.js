@@ -169,7 +169,7 @@ export function Us() {
         <div className={`transition-opacity duration-500 opacity-0 flex flex-col w-full h-full -mt-36 ${clickedIndex !== 2 ? 'hidden' : 'opacity-100 mt-3'} ${animate ? 'hidden' : ''}`}>
           <h2 className={`text-lg font-mono ml-5 w-9/12`}>Conoce más de nuestro trabajo aquí:</h2>
           <div className={`flex justify-start w-full h-auto`}>
-            <a className={`w-24 h-auto ml-44 hover:scale-110 transition-all ${isHover ? 'invert' : ''}`} href="https://www.youtube.com/watch?v=tRwHpyOq4P4" traget="_blank">
+            <a className={`w-24 h-auto ml-44 hover:scale-110 transition-all ${isHover ? 'invert' : ''}`} href="https://www.youtube.com/watch?v=tRwHpyOq4P4" target="_blank">
               <img src={`${process.env.PUBLIC_URL}/imagenes/youtube.png`} alt="Youtube-icon"></img>
             </a>
           </div>
