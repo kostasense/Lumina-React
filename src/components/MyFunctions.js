@@ -71,8 +71,7 @@ export function Info({ mainTitle, subtitle, imageSrc, linkHref, arrowSrc }) {
 
 export function Us() {
 
-  const [clickedIndex, setClickedIndex] = useState(-1);
-  const [isRotated, setIsRotated] = useState(false);
+  const [clickedIndex, setClickedIndex] = useState(0);
   const [isHover, setIsHover] = useState(false);
 
   return (
@@ -80,7 +79,7 @@ export function Us() {
       <div className="flex flex-col w-full h-full justify-start align-top">
         <div
           className={`flex flex-col w-9/12 h-14 border-2 rounded-xl mt-10 ml-10 py-3 align-middle justify-center hover:bg-black hover:text-white hover:shadow-md hover:cursor-pointer transition-all ${clickedIndex === 0 ? 'h-80' : ''}`}
-          onClick={() => clickedIndex !== 0 ? setClickedIndex(0) : setClickedIndex(-1)}
+          onClick={() => setClickedIndex(0)}
         >
           <div className="flex w-full h-14">
             <div className={`w-11/12 ${clickedIndex === 0 ? 'text-left ml-10' : 'text-center'}`}>
@@ -98,7 +97,7 @@ export function Us() {
 
         <div
           className={`flex flex-col w-9/12 h-14 border-2 rounded-xl mt-10 ml-10 py-3 align-middle justify-center hover:bg-black hover:text-white hover:shadow-md hover:cursor-pointer transition-all ${clickedIndex === 1 ? 'h-80' : ''}`}
-          onClick={() => clickedIndex !== 1 ? setClickedIndex(1) : setClickedIndex(-1)}
+          onClick={() => setClickedIndex(1)}
         >
           <div className="flex w-full h-14">
             <div className={`w-11/12 ${clickedIndex === 1 ? 'text-left ml-10' : 'text-center'}`}>
@@ -109,14 +108,14 @@ export function Us() {
             </div>
           </div>
 
-          <div className="flex w-full h-full">
-
+          <div className="flex w-10/12 h-full justify-start">
+            <h2 className={`text-sm font-mono ml-10 mt-3 ${clickedIndex !== 1 ? 'hidden' : ''}`}>En Lumina, estamos orgullosos de contar con talento joven y mexicano, un equipo compuesto por estudiantes y profesionales emergentes que representan el futuro de la ciberseguridad. Nuestra prioridad es fomentar su crecimiento profesional, brindándoles un entorno dinámico y oportunidades para desarrollarse en este sector. Creemos firmemente en el potencial de nuestra juventud, y trabajamos para que cada uno de ellos contribuya a la innovación y alcance sus metas personales/profesionales mientras construimos juntos un México más seguro digitalmente.</h2>
           </div>
         </div>
 
         <div
           className={`flex flex-col w-9/12 h-14 border-2 rounded-xl mt-10 ml-10 py-3 align-middle justify-center hover:bg-black hover:text-white hover:shadow-md hover:cursor-pointer transition-all ${clickedIndex === 2 ? 'h-80' : ''}`}
-          onClick={() => clickedIndex !== 2 ? setClickedIndex(2) : setClickedIndex(-1)}
+          onClick={() => setClickedIndex(2)}
         >
           <div className="flex w-full h-14">
             <div className={`w-11/12 ${clickedIndex === 2 ? 'text-left ml-10' : 'text-center'}`}>
@@ -127,34 +126,45 @@ export function Us() {
             </div>
           </div>
 
-          <div className="flex w-full h-full">
-
+          <div className="flex w-10/12 h-full justify-start">
+            <h2 className={`text-sm font-mono ml-10 mt-10 ${clickedIndex !== 2 ? 'hidden' : ''}`}>En Lumina, nos enfocamos en brindar soluciones de ciberseguridad adaptadas a empresas de todos los tamaños, desde microempresas hasta grandes corporativos. Ofrecemos servicios como firewalls avanzados, auditorías de seguridad, gestión de accesos y respaldo de datos, siempre ajustándonos a las necesidades de cada cliente. Nuestro objetivo es proteger sus activos digitales y garantizar un entorno seguro para su crecimiento.</h2>
           </div>
-        </div>
-
-        <div className={`absolute flex w-28 h-1/12 mt-96 ml-72 py-3 align-middle justify-center transition-opacity ${clickedIndex !== -1 ? 'opacity-0' : 'opacity-100'}`}>
-          <a
-            className={`w-auto h-auto transform transition-all hover:scale-110 duration-300 ${isRotated ? 'rotate-360' : ''} ${clickedIndex !== -1 ? 'hidden' : ''}`}
-            href="#video-section"
-            onClick={() => setIsRotated(!isRotated)}
-          >
-            <img className="w-auto h-auto" src={`${process.env.PUBLIC_URL}/imagenes/flecha-abajo.png`} alt="Arrow" />
-          </a>
         </div>
       </div>
 
       <div
-        className={`self-end flex flex-col justify-start align-top w-7/12 h-14 border-2 rounded-xl mb-10 mr-10 py-3 hover:bg-black hover:text-white hover:shadow-md transition-all ${clickedIndex !== -1 ? 'h-52' : ''}`}
+        className={`self-end flex flex-col justify-start align-top w-7/12 h-52 border-2 rounded-xl mb-10 mr-10 py-3 hover:bg-black hover:text-white hover:shadow-md transition-all`}
         onMouseOver={() => setIsHover(true)}
         onMouseLeave={()=> setIsHover(false)}
       >
-        <img className={`rotate-270 ml-5 w-7 h-7 invert ${clickedIndex !== -1 ? 'rotate-0' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/flecha-abajo-white.png`}></img>
-        <h2 className={`text-lg font-mono ml-5 w-10/12 ${clickedIndex !== 0 ? 'hidden' : ''}`}>Protegiendo a nuestras empresas desde 2024</h2>
-        <div className={`flex justify-start w-full h-auto ${clickedIndex !== 0 ? 'hidden' : ''}`}>
-          <img className={`w-24 h-24 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/cb.png`}></img>
-          <img className={`w-24 h-12 ml-5 mt-4 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/besachi.png`}></img>
-          <img className={`w-20 h-20 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/pipirin.png`}></img>
-          <img className={`w-20 h-20 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/pizzeta.png`}></img>
+        <img className={`ml-5 w-7 h-7 invert`} src={`${process.env.PUBLIC_URL}/imagenes/flecha-abajo-white.png`}></img>
+        <div className={`absolute flex flex-col w-full h-full mt-10 ${clickedIndex !== 0 ? 'hidden' : ''}`}>
+          <h2 className={`text-lg font-mono ml-5 w-3/12`}>Protegiendo a nuestros clientes desde 2024.</h2>
+          <div className={`flex justify-start w-full h-auto`}>
+            <img className={`w-24 h-24 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/cb.png`}></img>
+            <img className={`w-24 h-12 ml-5 mt-4 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/besachi.png`}></img>
+            <img className={`w-20 h-20 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/pipirin.png`}></img>
+            <img className={`w-20 h-20 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/pizzeta.png`}></img>
+          </div>
+        </div>
+
+        <div className={`absolute flex flex-col w-full h-full mt-10 ${clickedIndex !== 1 ? 'hidden' : ''}`}>
+          <h2 className={`text-lg font-mono ml-5 w-3/12`}>Talento proveniente de instituciones nacionales.</h2>
+          <div className={`flex justify-start w-full h-auto ml-14 mt-4 gap-8`}>
+            <img className={`w-12 h-16 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/tecnm.png`}></img>
+            <img className={`w-14 h-16 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/unam.png`}></img>
+            <img className={`w-14 h-16 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/ipn.png`}></img>
+            <img className={`w-20 h-10 mt-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/uam.png`}></img>
+          </div>
+        </div>
+
+        <div className={`absolute flex flex-col w-full h-full mt-10 ${clickedIndex !== 2 ? 'hidden' : ''}`}>
+          <h2 className={`text-lg font-mono ml-5 w-3/12`}>Conoce más de nuestro trabajo aquí:</h2>
+          <div className={`flex justify-start w-full h-auto`}>
+            <a className={`w-24 h-auto ml-44 ${isHover ? 'invert' : ''}`} href="https://www.youtube.com/watch?v=tRwHpyOq4P4">
+              <img src={`${process.env.PUBLIC_URL}/imagenes/youtube.png`} alt="Youtube-icon"></img>
+            </a>
+          </div>
         </div>
       </div>
     </section>
