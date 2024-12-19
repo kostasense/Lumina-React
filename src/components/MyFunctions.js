@@ -146,30 +146,30 @@ export function Us() {
       >
         <img className={`ml-5 w-7 h-7 invert`} src={`${process.env.PUBLIC_URL}/imagenes/flecha-abajo-white.png`}></img>
         
-        <div className={`opacity-0 transition-opacity flex flex-col w-full h-full mt-5 ${clickedIndex !== 0 ? '' : 'opacity-100'} ${animate ? 'hidden' : ''}`}>
+        <div className={`transition-opacity duration-500 opacity-0 flex flex-col w-full h-full mt-3 ${clickedIndex !== 0 ? 'hidden' : 'opacity-100'} ${animate ? 'hidden' : ''}`}>
           <h2 className={`text-lg font-mono ml-5 w-9/12`}>Protegiendo a nuestros clientes desde 2024.</h2>
           <div className={`flex justify-start w-full h-auto`}>
-            <img className={`w-24 h-24 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/cb.png`}></img>
-            <img className={`w-24 h-12 ml-5 mt-4 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/besachi.png`}></img>
-            <img className={`w-20 h-20 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/pipirin.png`}></img>
-            <img className={`w-20 h-20 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/pizzeta.png`}></img>
+            <img className={`w-24 h-24 ml-5 transition-all duration-100 hover:scale-110 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/cb.png`}></img>
+            <img className={`w-24 h-12 ml-5 mt-4 transition-all duration-100 hover:scale-110 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/besachi.png`}></img>
+            <img className={`w-20 h-20 ml-5 transition-all duration-100 hover:scale-110 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/pipirin.png`}></img>
+            <img className={`w-20 h-20 ml-5 transition-all duration-100 hover:scale-110 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/pizzeta.png`}></img>
           </div>
         </div>
 
-        <div className={`opacity-0 transition-opacity flex flex-col w-full h-full -mt-40 ${clickedIndex !== 1 ? '' : 'opacity-100'} ${animate ? 'hidden' : ''}`}>
+        <div className={`transition-opacity duration-500 opacity-0 flex flex-col w-full h-full -mt-40 ${clickedIndex !== 1 ? 'hidden' : 'opacity-100 mt-3'} ${animate ? 'hidden' : ''}`}>
           <h2 className={`text-lg font-mono ml-5 w-9/12`}>Talento proveniente de instituciones nacionales.</h2>
           <div className={`flex justify-start w-full h-auto ml-14 mt-3 gap-8`}>
-            <img className={`w-12 h-16 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/tecnm.png`}></img>
-            <img className={`w-14 h-16 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/unam.png`}></img>
-            <img className={`w-14 h-16 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/ipn.png`}></img>
-            <img className={`w-20 h-10 mt-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/uam.png`}></img>
+            <img className={`w-12 h-16 transition-all duration-100 hover:scale-110 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/tecnm.png`}></img>
+            <img className={`w-14 h-16 transition-all duration-100 hover:scale-110 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/unam.png`}></img>
+            <img className={`w-14 h-16 transition-all duration-100 hover:scale-110 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/ipn.png`}></img>
+            <img className={`w-20 h-10 mt-5 transition-all duration-100 hover:scale-110 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/uam.png`}></img>
           </div>
         </div>
 
-        <div className={`opacity-0 transition-opacity flex flex-col w-full h-full -mt-36 ${clickedIndex !== 2 ? '' : 'opacity-100'} ${animate ? 'hidden' : ''}`}>
+        <div className={`transition-opacity duration-500 opacity-0 flex flex-col w-full h-full -mt-36 ${clickedIndex !== 2 ? 'hidden' : 'opacity-100 mt-3'} ${animate ? 'hidden' : ''}`}>
           <h2 className={`text-lg font-mono ml-5 w-9/12`}>Conoce más de nuestro trabajo aquí:</h2>
           <div className={`flex justify-start w-full h-auto`}>
-            <a className={`w-24 h-auto ml-44 ${isHover ? 'invert' : ''}`} href="https://www.youtube.com/watch?v=tRwHpyOq4P4">
+            <a className={`w-24 h-auto ml-44 hover:scale-110 transition-all ${isHover ? 'invert' : ''}`} href="https://www.youtube.com/watch?v=tRwHpyOq4P4" traget="_blank">
               <img src={`${process.env.PUBLIC_URL}/imagenes/youtube.png`} alt="Youtube-icon"></img>
             </a>
           </div>
