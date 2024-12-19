@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export function Header({ logoSrc, links, socialLinks }) {
   return (
@@ -73,6 +73,13 @@ export function Us() {
 
   const [clickedIndex, setClickedIndex] = useState(0);
   const [isHover, setIsHover] = useState(false);
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+    const timeout = setTimeout(() => setAnimate(false), 500);
+    return () => clearTimeout(timeout);
+  }, [clickedIndex]);
 
   return (
     <section className="flex w-full h-screen" id="us-section">
@@ -133,13 +140,14 @@ export function Us() {
       </div>
 
       <div
-        className={`self-end flex flex-col justify-start align-top w-7/12 h-52 border-2 rounded-xl mb-10 mr-10 py-3 hover:bg-black hover:text-white hover:shadow-md transition-all`}
+        className={`self-end flex flex-col justify-start align-top w-7/12 h-52 border-2 rounded-xl mb-10 mr-10 py-3 hover:bg-black hover:text-white hover:shadow-md transition-all ${animate ? 'translate-x-full' : ''}`}
         onMouseOver={() => setIsHover(true)}
         onMouseLeave={()=> setIsHover(false)}
       >
         <img className={`ml-5 w-7 h-7 invert`} src={`${process.env.PUBLIC_URL}/imagenes/flecha-abajo-white.png`}></img>
-        <div className={`absolute flex flex-col w-full h-full mt-10 ${clickedIndex !== 0 ? 'hidden' : ''}`}>
-          <h2 className={`text-lg font-mono ml-5 w-3/12`}>Protegiendo a nuestros clientes desde 2024.</h2>
+        
+        <div className={`opacity-0 transition-opacity flex flex-col w-full h-full mt-5 ${clickedIndex !== 0 ? '' : 'opacity-100'} ${animate ? 'hidden' : ''}`}>
+          <h2 className={`text-lg font-mono ml-5 w-9/12`}>Protegiendo a nuestros clientes desde 2024.</h2>
           <div className={`flex justify-start w-full h-auto`}>
             <img className={`w-24 h-24 ml-5 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/cb.png`}></img>
             <img className={`w-24 h-12 ml-5 mt-4 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/besachi.png`}></img>
@@ -148,9 +156,9 @@ export function Us() {
           </div>
         </div>
 
-        <div className={`absolute flex flex-col w-full h-full mt-10 ${clickedIndex !== 1 ? 'hidden' : ''}`}>
-          <h2 className={`text-lg font-mono ml-5 w-3/12`}>Talento proveniente de instituciones nacionales.</h2>
-          <div className={`flex justify-start w-full h-auto ml-14 mt-4 gap-8`}>
+        <div className={`opacity-0 transition-opacity flex flex-col w-full h-full -mt-40 ${clickedIndex !== 1 ? '' : 'opacity-100'} ${animate ? 'hidden' : ''}`}>
+          <h2 className={`text-lg font-mono ml-5 w-9/12`}>Talento proveniente de instituciones nacionales.</h2>
+          <div className={`flex justify-start w-full h-auto ml-14 mt-3 gap-8`}>
             <img className={`w-12 h-16 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/tecnm.png`}></img>
             <img className={`w-14 h-16 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/unam.png`}></img>
             <img className={`w-14 h-16 transition-all duration-100 ${isHover ? 'invert' : ''}`} src={`${process.env.PUBLIC_URL}/imagenes/ipn.png`}></img>
@@ -158,8 +166,8 @@ export function Us() {
           </div>
         </div>
 
-        <div className={`absolute flex flex-col w-full h-full mt-10 ${clickedIndex !== 2 ? 'hidden' : ''}`}>
-          <h2 className={`text-lg font-mono ml-5 w-3/12`}>Conoce más de nuestro trabajo aquí:</h2>
+        <div className={`opacity-0 transition-opacity flex flex-col w-full h-full -mt-36 ${clickedIndex !== 2 ? '' : 'opacity-100'} ${animate ? 'hidden' : ''}`}>
+          <h2 className={`text-lg font-mono ml-5 w-9/12`}>Conoce más de nuestro trabajo aquí:</h2>
           <div className={`flex justify-start w-full h-auto`}>
             <a className={`w-24 h-auto ml-44 ${isHover ? 'invert' : ''}`} href="https://www.youtube.com/watch?v=tRwHpyOq4P4">
               <img src={`${process.env.PUBLIC_URL}/imagenes/youtube.png`} alt="Youtube-icon"></img>
