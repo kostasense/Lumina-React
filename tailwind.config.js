@@ -13,6 +13,10 @@ module.exports = {
         '270': '270deg',
         '0': '0deg',
       },
+      screens: {
+        'xs': '480px', // Nuevo breakpoint para pantallas extra pequeñas
+        '3xl': '1920px', // Nuevo breakpoint para pantallas grandes
+      },
     },
   },
   plugins: [],

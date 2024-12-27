@@ -1,5 +1,5 @@
 import './App.css';
-import { Header, Info, Us} from './components/MyFunctions';
+import { Header, Info, Us, Contract} from './components/MyFunctions';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 function Home() {
   const links = [
     { href: "#us-section", text: "Sobre nosotros" },
-    { href: "#video-section", text: "¿Qué es lo que hacemos?" },
+    { href: "https://www.youtube.com/watch?v=tRwHpyOq4P4", text: "¿Qué es lo que hacemos?" },
     { href: "#contract-section", text: "Contratar" },
   ];
 
@@ -41,6 +41,8 @@ function Home() {
         arrowSrc="/imagenes/flecha-abajo.png"
       />
       <Us
+      />
+      <Contract
       />
     </div>
   );
