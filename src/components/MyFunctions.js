@@ -180,23 +180,23 @@ export function Us() {
       </section>
 
       <section className="lg:hidden w-full flex flex-col">
-        <div className="w-full h-auto flex justify-start mt-10 mb-auto gap-4">
-          <div className="grid grid-cols-2 w-6/12 mt-auto mb-auto ml-10 max-w-sm">
-            <img className={`w-9/12 h-40 object-contain transition-all duration-100 scale-110 hover:scale-125`} src={`${process.env.PUBLIC_URL}/imagenes/cb.png`}></img>
-            <img className={`w-9/12 h-40 object-contain transition-all duration-100 scale-110 hover:scale-125`} src={`${process.env.PUBLIC_URL}/imagenes/besachi.png`}></img>
-            <img className={`w-9/12 h-40 object-contain transition-all duration-100 scale-110 hover:scale-125`} src={`${process.env.PUBLIC_URL}/imagenes/pipirin.png`}></img>
-            <img className={`w-9/12 h-40 object-contain transition-all duration-100 scale-110 hover:scale-125`} src={`${process.env.PUBLIC_URL}/imagenes/pizzeta.png`}></img>
-          </div>
-          <div className="flex flex-col bg-white rounded-lg border-2 w-6/12 align-middle z-10 h-3/6 self-center p-5 mr-10">
+        <div className="w-full h-auto flex flex-col justify-start mt-10 mb-auto gap-4">
+          <div className="flex bg-white rounded-lg border-2 w-10/12 align-middle z-10 h-3/6 self-center p-5 mr-auto ml-auto">
             <h2 className="font-mono text-xl">Nuestras soluciones son precisas y adaptables, nuestros clientes confian en ellas.</h2>
+          </div>
+          <div className="grid grid-cols-2 w-full m-auto max-w-sm">
+            <img className={`w-9/12 h-40 m-auto object-contain transition-all duration-100 scale-110 hover:scale-125`} src={`${process.env.PUBLIC_URL}/imagenes/cb.png`}></img>
+            <img className={`w-9/12 h-40 m-auto object-contain transition-all duration-100 scale-110 hover:scale-125`} src={`${process.env.PUBLIC_URL}/imagenes/besachi.png`}></img>
+            <img className={`w-9/12 h-40 m-auto object-contain transition-all duration-100 scale-110 hover:scale-125`} src={`${process.env.PUBLIC_URL}/imagenes/pipirin.png`}></img>
+            <img className={`w-9/12 h-40 m-auto object-contain transition-all duration-100 scale-110 hover:scale-125`} src={`${process.env.PUBLIC_URL}/imagenes/pizzeta.png`}></img>
           </div>
         </div>
 
-        <div className="w-full h-auto flex justify-start mt-10 mb-auto gap-5">
-          <div className="flex flex-col bg-white rounded-lg border-2 w-6/12 align-middle z-10 h-3/6 self-center p-5 ml-10">
+        <div className="w-full h-auto flex flex-col justify-start mt-10 mb-auto gap-5">
+          <div className="flex bg-white rounded-lg border-2 w-10/12 align-middle z-10 h-3/6 self-center p-5 mr-auto ml-auto">
             <h2 className="font-mono text-xl">Contamos con talento nacional, estudiantes y profesionales emergentes de las principales instituciones nacionales.</h2>
           </div>
-          <div className="grid grid-cols-2 w-6/12 mt-auto mb-auto mr-10 max-w-sm">
+          <div className="grid grid-cols-2 w-full m-auto max-w-sm">
             <img className={`w-9/12 h-40 m-auto object-contain transition-all duration-100 scale-90 hover:scale-100`} src={`${process.env.PUBLIC_URL}/imagenes/tecnm.png`}></img>
             <img className={`w-9/12 h-40 m-auto object-contain transition-all duration-100 scale-90 hover:scale-100`} src={`${process.env.PUBLIC_URL}/imagenes/unam.png`}></img>
             <img className={`w-9/12 h-40 m-auto object-contain transition-all duration-100 scale-90 hover:scale-100`} src={`${process.env.PUBLIC_URL}/imagenes/ipn.png`}></img>
