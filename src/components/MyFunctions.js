@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 export function Header({ logoSrc, links, socialLinks }) {
   return (
     <header id="header" className="flex flex-col sm:flex-row items-center sm:justify-between px-6 py-4 w-full h-auto">
-      <a href="/" className="transform transition-all duration-300 hover:scale-110 lg:w-3/12">
+      <a href="/Lumina-React" className="transform transition-all duration-300 hover:scale-110 lg:w-3/12">
         <img
           id="header-img"
           src={`${process.env.PUBLIC_URL}/${logoSrc}`}
