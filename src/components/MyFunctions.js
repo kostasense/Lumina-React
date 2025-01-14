@@ -216,7 +216,15 @@ export function Contract() {
         <h1 className="font-mono text-2xl mt-auto mb-auto">¿Que es lo que ofrecemos?</h1>
       </div>
       <div className="flex flex-col align-top w-full h-auto">
-        <h1 className="font-mono text-lg mt-auto mb-auto w-8/12 self-center">En Lumina nos preocupamos por la integridad de tu informacion sin importar el tamaño de tu espacio, es por eso que contamos con los siguientes planes:</h1>
+        <h1 className="font-mono text-lg mt-auto mb-10 w-8/12 self-center lg:self-start lg:ml-28">En Lumina nos preocupamos por la integridad de tu informacion sin importar el tamaño de tu espacio, es por eso que contamos con los siguientes planes:</h1>
+        <div className="w-full m-auto flex justify-center gap-5">
+          <div className="border-2 rounded-lg w-5/12 h-14 flex justify-center">
+
+          </div>
+          <div className="border-2 rounded-lg w-5/12 h-14 flex justify-center">
+
+          </div>
+        </div>
       </div>
     </section>
   )
